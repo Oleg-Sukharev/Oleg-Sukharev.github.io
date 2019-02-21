@@ -1,0 +1,131 @@
+.catalogue{
+	width: 760px;
+}
+
+.catalogue__list{
+	.reset-list();
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 75px;
+}
+
+.catalogue__item{
+	position: relative;
+	width: 360px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	&:nth-child(2n){
+		margin-left: 40px;
+	}
+	&:nth-child(4)::before{
+		position: absolute;
+		content: "New";
+		height: 50px;
+		width: 50px;
+		right: 10px;
+		top: 10px;
+		padding-top: 13px;
+		text-align: center;
+		box-sizing: border-box;
+		border: 2px solid #000;
+		border-radius: 50%;
+		font-weight: 800;
+		text-transform: uppercase;
+		opacity: .2;
+		z-index: 1;
+	}	
+	&:hover > .catalogue__add-wrapper{
+		display: block;
+	}
+}
+
+.catalogue__image-wrapper{
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.catalogue__heading{
+	font-family: @gilroy;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 800;
+	margin: 0;
+	padding: 0;
+	order: 2;
+}
+
+.catalogue__price{
+	font-family: @gilroy;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;	
+	color:#464646;
+	order: 3;
+}
+
+.catalogue_btn-add{
+	display: block;
+	width: 200px;
+	position: relative;
+	font-family: @gilroy;
+	font-size: 18px;
+	line-height: 1;
+	margin: 170px auto 22px;
+	font-weight: 800;
+	letter-spacing: 2px;
+	padding: 15px 0; 
+	text-transform: uppercase;
+	text-align: center;
+	background-color: transparent;
+	cursor: pointer;
+	z-index: 1;
+	&::before{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 8px;
+		z-index: -1;
+		top: 20px;
+		left: 0;
+		background-color: #f0c52e;
+		transition:  2s;
+	}
+	&:hover::before,
+	&:focus::before{
+		top: 0;
+		height: 100%;
+	}
+	&:active::before{
+		opacity: .5;
+	}
+}	
+
+.catalogue_btn-copmpare{
+	display: block;
+	font: inherit;
+	text-align: center;
+	font-size: 13px;
+	line-height: 16px;
+    margin: 0 auto;
+    color: rgba(0,0,0,.5);
+    cursor: pointer;
+    &:hover,
+    &:focus{
+    	 color: rgba(0,0,0,1);
+    }
+    &:active{
+    	 color: rgba(0,0,0,.4);
+    }
+}
+
+.catalogue__add-wrapper{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 360px;
+	top: 0;
+	left: 0;
+	background-color: rgba(238,238,238,.6);
+}

@@ -1,0 +1,36 @@
+.producers{
+	background-size: border-box;
+	width: 1200px;
+	padding: 0 20px;
+	margin: 0 auto 70px;
+}
+
+.producers__list{
+	.reset-list();
+	width: 1065px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.producers__item{
+	position: relative;
+	&:hover .producers__img,
+	&:focus .producers__img{
+		z-index: -1;
+	}
+}
+
+.producers__img{
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+}
+
+.producers__img-color{
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	background-color: #fff;
+
+}
