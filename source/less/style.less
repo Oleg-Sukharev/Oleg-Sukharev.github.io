@@ -1,16 +1,25 @@
-@import "fonts.css";
+html{
+  height: 100%;
+}
 
 body{
-	background-color: #000;
-	color: rgba(255,255,255,.5);
+	color: #fff;
 	line-height: 1;
 	font-size: 14px;
 	box-sizing: border-box;
 	position: relative;
-	font-family: 'robotoregular', "Arial" ,sans-serif;
-	padding-bottom: 40px;
+	font-family: 'Roboto', "Arial", sans-serif;
+
+	display: flex;
+  	flex-direction: column;
+  	min-height: 100%;
+  	margin: 0;
 }
 
+.main{
+	background-color: #6c0b14;
+	flex-grow: 1;
+}
 
 *, *:before, *:after {
   	box-sizing: border-box;
@@ -23,17 +32,19 @@ img{
 
 a{
 	cursor: pointer;
-	color: rgba(255,255,255,.5);
+	color: #fff;
 	font-family: inherit;
 	text-decoration:none;
 	outline: none;
 	&:hover,
-	&:focus,
-	&:active,
-	&:disabled{
+	&:focus{
 		text-decoration: none;
-		color: #fff;
-	}	
+		color: #c5c1c1;
+		opacity: .9;
+    }
+    &:active{
+   		opacity: .6;
+   	}
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -65,30 +76,9 @@ input{
 }
 
 
-.header{
-	margin-bottom: 20px;
-}
-
-.navbar-brand{
-	color: rgba(255,255,255,.5) !important;
-}
-
-.nav-link{
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.header{ 
-	position: sticky;
-	z-index: 3;
-    top: 0;
-    left: 0;
-}
-
-.navbar-brand__img{
-	width: 50px;
-	height: 50px;
-}
 
 
+@import url("blocks/header.less");
+@import url("blocks/info.less");
 @import url("blocks/portfolio.less");
+@import url("blocks/footer.less");

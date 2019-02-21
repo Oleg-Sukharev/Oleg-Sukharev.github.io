@@ -1,98 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <span>Oleg Sukharev</span>
+                        <img class="navbar-brand__img" src="images/logo.png" alt="Shark-master" width="50px" height="50px">
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+            <h1 class="main__title visually-hidden">A little bit about me ...</h1>
+            <div class="container about">
+                <div class="row">
+                    <div class="about__itIsme-wrapper col-sm-12">
+                        <img class="about__itIsMe" src="images/itIsMe.jpg" alt="It is me">
+                    </div>
+                    <div class="about__skills col-sm-12">
+                        <ul class="about__icon-list">
+                            <li class="about__icon-item">
+                                <img src="images/html.min.png" alt="HTML">
+                            </li>
+                            <li class="about__icon-item">
+                                <img src="images/css.min.png" alt="CSS">
+                            </li>
+                            <li class="about__icon-item">
+                                <img src="images/js.min.png" alt="JS">
+                            </li>
+                        </ul>
+                        <ul class="about__skills-list">
+                            <li class="about__skills-item">HTML</li>
+                            <li class="about__skills-item">CSS</li>
+                            <li class="about__skills-item">LESS</li>
+                            <li class="about__skills-item">Gulp</li>
+                            <li class="about__skills-item">BEM</li>
+                            <li class="about__skills-item">JavaScript</li>
+                            <li class="about__skills-item">jQuery</li>
+                            <li class="about__skills-item">Adobe Photoshop</li>
+                            <li class="about__skills-item">Bootstrap 3</li>
+                            <li class="about__skills-item">Bootstrap 4</li>
+                            <li class="about__skills-item">Git(basic)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="portfolio container" id="portfolio">
+                <div class="row">
+                    <h2 class="portfolio__title col-sm-12">Portfolio</h2>
+
+                    <div class="portfolio__item col-sm-6 col-md-4">
+                        <a class="portfolio__link" href="http://www.agromax.farm">
+                            <div class="portfolio__caption">
+                                <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
+                            </div>
+                            <img class="portfolio__img" src="images/agromax.min.png" alt="Agromax">
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-sm-6 col-md-4">
+                        <a class="portfolio__link" href="http://demo.pinofran.com/demo/oleg-wine/cave.html">
+                            <div class="portfolio__caption">
+                                <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
+                            </div>
+                            <img class="portfolio__img" src="images/cwex.min.png" alt="CWEX">
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-sm-6 col-md-4">
+                        <a class="portfolio__link" href="../sites/barbershop/index.html">
+                            <div class="portfolio__caption">
+                                <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
+                            </div>
+                            <img class="portfolio__img" src="images/barbershop.min.png" alt="Barbershop">
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-sm-6 col-md-4">
+                        <a class="portfolio__link" href="../sites/device/source/index.html">
+                            <div class="portfolio__caption">
+                                <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
+                            </div>
+                            <img class="portfolio__img" src="images/device.min.png" alt="Device">
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-sm-6 col-md-4">
+                        <a class="portfolio__link" href="../sites/nails/source/index.html">
+                            <div class="portfolio__caption">
+                                <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
+                            </div>
+                            <img class="portfolio__img" src="images/nails.min.png" alt="Nails">
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-sm-6 col-md-4">
+                        <a class="portfolio__link" href="../sites/gllacy/index.html">
+                            <div class="portfolio__caption">
+                                <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
+                            </div>
+                            <img class="portfolio__img" src="images/gllacy.min.png" alt="Gllacy">
+                        </a>
+                    </div>
+
+
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
             <div class="container">
-                <div class="navbar-brand">
-                    <span>Oleg Sukharev</span>
-                    <img class="navbar-brand__img" src="images/logo.png" alt="Shark-master" width="50px" height="50px">
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
+                <div class="row">
+                    <div class="socials-nw-wr  col-sm-6"> 
+
+                        <ul class="socials-nw">
+                            <li class="socials-nw__item">
+                                <a class="socials-nw__link fa fa-facebook-f" href="https://www.facebook.com/oleg.sukharev.3" target="_blank">
+                                    <span class="visually-hidden">Facebook</span>
+                                </a>
+                            </li>
+                            <li class="socials-nw__item">
+                                <a class="socials-nw__link fa fa-linkedin" href="https://www.linkedin.com/in/oleg-sukharev-0545a9148/" target="_blank">
+                                    <span class="visually-hidden">Linkedin</span>
+                                </a>
+                            </li>
+                            <li class="socials-nw__item" target="_blank">
+                                <a class="socials-nw__link fa fa-skype" href="skype:live:sukharev.oleg?chat>">
+                                    <span class="visually-hidden">Skype</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__info col-sm-6 ">
+                        <div class="footer__info-more-wr">
+                            <h3 class="footer__info-tilte footer__info-tilte--dec">Email:</h3>
+                            <a class="footer__info-link"  href="mailto:olegsukharev1991@gmail.com">olegsukharev1991@gmail.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main class="main">
-        <h1 class="main__title visually-hidden">Now a little bit about me))</h1>
-        <section class="portfolio container" id="portfolio">
-            <div class="row">
-                <h2 class="portfolio__title col-sm-12">Portfolio</h2>
-
-                <div class="portfolio__item col-sm-6 col-md-4">
-                    <a class="portfolio__link" href="http://www.agromax.farm">
-                        <div class="portfolio__caption">
-                            <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
-                        </div>
-                        <img class="portfolio__img" src="images/agromax.min.png" alt="Agromax">
-                    </a>
-                </div>
-
-                <div class="portfolio__item col-sm-6 col-md-4">
-                    <a class="portfolio__link" href="http://demo.pinofran.com/demo/oleg-wine/cave.html">
-                        <div class="portfolio__caption">
-                            <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
-                        </div>
-                        <img class="portfolio__img" src="images/cwex.min.png" alt="CWEX">
-                    </a>
-                </div>
-
-                <div class="portfolio__item col-sm-6 col-md-4">
-                    <a class="portfolio__link" href="../sites/barbershop/index.html">
-                        <div class="portfolio__caption">
-                            <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
-                        </div>
-                        <img class="portfolio__img" src="images/barbershop.min.png" alt="Barbershop">
-                    </a>
-                </div>
-
-                <div class="portfolio__item col-sm-6 col-md-4">
-                    <a class="portfolio__link" href="../sites/device/source/index.html">
-                        <div class="portfolio__caption">
-                            <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
-                        </div>
-                        <img class="portfolio__img" src="images/device.min.png" alt="Device">
-                    </a>
-                </div>
-
-                <div class="portfolio__item col-sm-6 col-md-4">
-                    <a class="portfolio__link" href="../sites/nails/source/index.html">
-                        <div class="portfolio__caption">
-                            <i class="portfolio__icon fa fa-search-plus" aria-hidden="true"></i>  
-                        </div>
-                        <img class="portfolio__img" src="images/nails.min.png" alt="Nails">
-                    </a>
-                </div>
-
-
-            </div>
-        </section>
-    </main>
-    <script src="js/jquery.min.js"></script>
-    <script src="bootstrap/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+        </footer>
+        <script src="js/jquery.min.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
