@@ -1,108 +1,162 @@
-.header{
-	position: relative;
-	width: 1160px;
-	margin: 40px auto 0;
-	background-color: #f7e296;
-	margin-bottom: 55px;
+ .header{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+ }
+
+.header__site-nav{
+    background-color:transparent;
+    border: none;
 }
 
-.header .container{
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 55px;
+ .header__site-nav-link{
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    line-height: 44px;
+    padding: 10px 15px;
+    &:hover,
+    &:focus{
+        color: #e82d8e;
+    }
+ }
+
+.navbar-toggler{
+    outline: none;
+    font-size: 16px;
+    color: #fff;
 }
 
-.header__left-side{
-	width: 440px;
+.header__site-nav-btn{
+    border: none;
+    font-size: 30px;
+    color:  #000;  
+    float: left ;
+}
+.header__site-nav{
+    position: relative;
+    z-index: 4;
 }
 
-.header__right-side{
-	width: 502px
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+    background-color: transparent;
 }
 
-.header__logo{
-	z-index: 2;
-	font-family: @gilroy;
-	font-weight: 800;
-	font-size: 48px;
-	line-height: 48px;
-	position: absolute;
-	left: 60px;
-	top: -22px;
-	text-transform: uppercase;
-	&:focus,
-	&:hover{
-		opacity: .6;
-	}
-	&:active{
-		opacity: .3;
-	}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border: none;
+}
+
+.navbar-collapse{
+    box-shadow: none;
+}
+
+.header__phone-wrapper{
+    padding-left: 0;
+}
+
+.header__phones{
+    font-family: "robotobold", "Arial" , sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: .03em;
+    position:relative;
+    color: #fff;
+    font-family: inherit;
+    display: block;
+    padding-left: 25px;
+    text-align: left;
 }
 
 
-.search-form{
-	position: relative;
-    padding-top: 42px;
-    margin-bottom: 26px;
-	background-color: transparent;
-	&::before{
-		position: absolute;
-		content: "";
-		width: 22px;
-		height: 22px;
-		left: 0;
-		bottom: 10px;
-		background-color: transparent;
-		background-image: url("../img/icons.png");
-		background-repeat: no-repeat;
-		background-position: -310px -5px;
-	}
+.header__phone-item{
+    display: block;
+    font-style: inherit;
+    color: #fff;
+    margin-bottom: 10px;
+    &:hover,
+    &:focus{
+        color: #e82d8e;
+    }
 }
 
-.search-form__btn{
-	position: absolute;
-	font: inherit;
-	box-sizing: border-box;
-	right: 0;
-	bottom: 0;
-	padding: 15px 15px;
-	background-color: transparent;
-	border: 2px solid #000;
-	cursor: pointer;
-	display: none;
-	&:active{
-		display: block;
-		color: #fff;
-  		background-color: #000;
-	}
+.header__phone-icon{
+    position: absolute;
+    color: #fff;
+    left: 0;
+    top: 0px;
+    font-size: 25px;
+    line-height: 44px;
 }
 
-.search-form__input{
-	box-sizing: border-box;
-	font-family: inherit;
-	width: 100%;
-	font-size: 15px;
-	line-height: 30px;
-	padding: 5px 100px 5px 40px;
-	background-color: transparent;
-	border: none;
-	outline: none;
-	&:focus{
-		padding-bottom: 3px;
-		border-bottom: 2px solid #000;
-	}
-	&:focus + .search-form__btn{
-		display: block;
-	}
+.dropdown-menu{
+    position: absolute;
+    width: 420px;
+    margin: 20px;
+    border-radius: 15px;
 }
 
-.search-form__input::-webkit-input-placeholder {
-	opacity: .3;
-	color: #000;
+@media (max-width: 1140px) {
+    .header__site-nav-link{
+        font-size: 11px;
+    }
 }
 
-.search-form__input:hover::-webkit-input-placeholder,
-.search-form__input:focus::-webkit-input-placeholder {
-	opacity: .6;
-	color: #000;
+@media (max-width: 992px) {
+    .main-promo{
+        padding-top: 140px;
+    }
+    .header__site-nav-link{
+        padding: 10px 5px;
+    }
 }
+
+@media (max-width: 768px) {
+    .header__user-nav-list{
+        display: flex;
+        position: absolute;
+        top: 0; 
+        right: 20px;
+    }
+
+    .header__user-nav-phone-icon{
+        top: 0;
+    }
+    
+    .header__site-nav-link{
+        display: block;
+        display: block;
+        background-color: #e8288d;
+        z-index: 4;
+        border-radius: 25px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header__site-nav-link:hover, .header__site-nav-link:focus{
+        color: #000;
+    }
+
+    .header__site-nav-btn{
+        color: #e8288d;
+        margin-top: 0;
+        padding-top:5px;
+    }
+
+    .proposals_sign-up-wrapper{
+        display: none;
+    }
+
+    .dropdown-menu{
+        width: auto;
+    }
+    
+    .header__phone-wrapper{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+}
+
+

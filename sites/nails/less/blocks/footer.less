@@ -1,69 +1,323 @@
 .footer{
-	width: 100%;
-	background-color: #565656;
-	color:#fff;
+	color: #b2a567;
+	background-color: #0c0c0c;
+	margin-top: 60px;
+	padding-top: 30px;
 }
 
-.footer > .container{
-	width: 1200px;
-    padding: 0 20px;
-    margin: 0 auto;
+.footer__contacts{
+  margin-bottom: 30px;
 }
 
-.footer__top{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-top: 60px;
-	margin-bottom: 40px;
-}
-
-.footer__logo{
+.footer__logo-link{
 	display: block;
-	font-family: @gilroy;
-	font-weight: 800;
-	font-size: 48px;
-	line-height: 48px;
-	text-transform: uppercase;
-	color: #ffc600;
-	&:focus,
-	&:hover{
-		opacity: .6;
-	}
-	&:active{
-		opacity: .3;
-	}
+	margin-bottom: 10px;
 }
 
-.footer__middle{
+.footer__phone{
+	display: inline-block;
 	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 68px;
+	color: #b2a567;
+	padding-left: 20px;
+	text-align: left;
+	margin-bottom: 10px;
+	&::before{
+		position: absolute;
+		font-size: 20px;
+		color: #b2a567;
+		left: -10px;
+	}
+	&:hover,
+	&:focus{
+		color: #e82d8e;
+	}
+	&:hover::before,
+	&:focus::before{
+		color: #e82d8e;
+	}
 }
 
-.footer__bottom{
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 40px;
-}
-
-.footer__dec-line{
+.footer__phone-bg{
+	font-size: 19px;
+	line-height: 1;
 	display: block;
-	width: 80px;
-	height: 7px;
-	background-color: #ffc600;;
+	color: #a7b077;
+	margin-bottom: 10px;
 }
 
-.footer__logo-academy{
+.footer__wa{
+	margin-right: auto;
+	display: inline-block;
+	position: relative;
+	color: #b2a567;
+	padding-left: 20px;
+	text-align: left;
+	margin-bottom: 10px;
+	&::before{
+		position: absolute;
+		font-size: 20px;
+		color: #b2a567;
+		left: -10px;
+	}
+	&:hover,
+	&:focus{
+		color: #e82d8e;
+	}
+	&:hover::before,
+	&:focus::before{
+		color: #e82d8e;
+	}
+
+}
+
+.footer__wa-bg{
+	font-size: 19px;
+	line-height: 1;
 	display: block;
-	height: 37px;
-	width: 28px;
-	margin-right: 50px;
+	color: #a7b077;
+	margin-bottom: 10px;
+}
+
+
+.footer__socials{
+	float: right;
+}
+
+.footer__socials-item{
+	display: inline-block;
+}
+
+.footer__socials{
+	margin-bottom: 10px;
+}
+
+.footer__socials-link{
+	text-align: center;
+	font-size: 20px;
+	line-height: 40px;
+	color: #e82d8e;
+	height: 40px;
+	width: 40px;
+	border: 1px solid #b2a567;
+	border-radius: 25px;
+	&::before{
+		display: block;
+		margin: 0 auto;
+	}
+	&:hover,
+	&:focus{
+		color: #fff;
+	}
+}
+
+.footer__signUp-info{
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.footer__signUp .signUp__form-input{
+	margin-right: 40px;
+	font-size: 13px;
+	line-height: 1;
+	margin: 0;
+	margin-right: 15px;
+}
+
+.footer__signUp  .signUp__form-btn{
+	margin: 0 15px;
+}
+
+.footer__signUp-input{
+	font-size: 11px;
+	line-height: 1;
+	padding: 10px 25px;
+	margin-right: 15px;
+	border: 1px solid #b2a567;
+	color: #b2a567;
+	border-radius: 20px;
 	background-color: transparent;
-	background-image: url("../img/icons.png");
-	background-repeat: no-repeat;
-	background-position: -382px -10px;
-	opacity: 1;
+	color: #fff;
+	outline: none;	
+}
+
+.footer__signUp-btn{
+	float: right;
+	display: inline-block;
+	vertical-align: top;
+    background-color: #76cd16;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    border: none;
+	padding: 10px 36px; 
+    margin-bottom: 20px;
+    border-radius: 25px;
+    &:hover,
+    &:focus{ 
+    	background-color: #ff3399;
+    }
+}
+
+.footer_signUp-descr{
+	font-size: 12px;
+	line-height: 16px;
+	float: right;
+	margin-bottom: 20px;
+}
+
+.footer_signUp-descr-tiny{
+	display: inline-block;
+	margin-bottom: 0;
+	margin-top: 5px;
+	display: inline-block;
+	color: #ff3399;
+	&:hover,
+    &:focus{ 
+    	color: #fff;
+    }
+}
+
+
+.footer__nav-wrapper{
+	position: relative;
+
+	padding: 20px 0;
+	margin-bottom: 20px;
+	&::before{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 2px;
+		left: 0;
+		top: 0;
+		background-color: #f7f5fa;
+	}
+	&::after{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 2px;
+		left: 0;
+		bottom: 0;
+		background-color: #f7f5fa;
+	}
+}
+
+.footer__nav-list{
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.footer__nav-link{
+	display: block;
+	padding: 2px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1;
+	color: #b2a567;
+	&:hover,
+	&:focus{
+		color: #e82d8e;
+	}
+}
+
+.footer__info-more{
+	line-height: 1;
+	font-size: 12px;
+	text-align: right;
+	float: right;
+}
+
+.footer__info-workFrom{
+	line-height: 25px;
+	color: #afafb0;
+	margin-bottom: 10px;
+}
+
+
+.footer__info-autom{
+	color: #b2a567;
+	display: inline-block;
+	position: relative;
+	line-height: 40px;
+	border: 2px solid #b2a567;
+	margin-bottom: 10px;
+	padding-left: 25px;
+	&::after{
+		position: relative;
+		display: inline-block;
+		vertical-align: sub;
+		margin: 0 10px;
+		content: "";
+		background-image: url("../images/ratio.png");
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		width: 39px;
+		height: 17px;
+		background-color: transparent;
+	}
+	&:hover,
+	&:focus{
+		color: #e82d8e;
+	}
+}
+
+.footer__info-booking{
+	color: #b2a567;
+	display: inline-block;
+	position: relative;
+	line-height: 40px;
+	margin-bottom: 10px;
+	margin-left: -20px;
+	&::after{
+		position: relative;
+		display: inline-block;
+		vertical-align: sub;
+		margin-left: 10px;
+		content: "";
+		background-image: url("../images/GBooking.png");
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		width: 93px;
+		height: 16px;
+		background-color: #fff;
+	}
+	&:hover,
+	&:focus{
+		color: #e82d8e;
+	}
+}
+
+.footer__info-nv{
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+@media (max-width: 768px ) {
+	.footer{
+		margin-top: 20px;
+	}
+	.footer__signUp-btn{
+		float: none;
+	}
+
+	.footer__signUp-info,
+	.footer__signUp-input,
+	.footer__signUp-btn{
+		margin-bottom: 10px;
+	}
+
+	.footer__socials{
+		float: none;
+	}
+
+	.footer__info-more{
+		float: left;
+	}
+
+	.footer__nav-wrapper .row > *{
+		margin-bottom: 30px;
+	}
+
 }
