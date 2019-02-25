@@ -19,12 +19,6 @@ body {
   min-height: 100%;
   margin: 0;
 }
-.main {
-  background-color: #464243;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
 *,
 *:before,
 *:after {
@@ -80,6 +74,12 @@ input {
   height: 1px;
   margin: -1px;
 }
+.main {
+  background-color: #50516d;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
 .title {
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -91,6 +91,10 @@ input {
   text-transform: none;
   font-size: 20px;
   letter-spacing: 1px;
+}
+.navbar-brand__code {
+  font-style: 25px;
+  margin-left: 5px;
 }
 .navbar {
   background-color: #100e16;
