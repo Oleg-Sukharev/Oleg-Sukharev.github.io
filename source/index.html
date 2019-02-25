@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Portfolio</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="Portfolio,Sukharev Oleg">
+        <meta name="keywords" content="Portfolio,Sukharev Oleg">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
@@ -13,7 +13,7 @@
     </head>
     <body>
         <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <nav class="navbar navbar-expand-lg navbar-dark static-top">
                 <div class="container">
                     <div class="navbar-brand">
                         <span>Oleg Sukharev</span>
@@ -46,7 +46,7 @@
                         <img class="about__itIsMe" src="images/itIsMe.jpg" alt="It is me">
                     </div>
                     <div class="about__skills col-sm-12">
-                        <h3 class="about__skill-title">Key skills</h2>
+                        <h3 class="about__skill-title title">Key skills</h2>
                         <ul class="about__icon-list">
                             <li class="about__icon-item">
                                 <img src="images/html.min.png" alt="HTML">
@@ -76,7 +76,7 @@
             </section>
             <section class="portfolio container" id="portfolio">
                 <div class="row">
-                    <h2 class="portfolio__title col-sm-12">Portfolio</h2>
+                    <h2 class="portfolio__title title col-sm-12">Portfolio</h2>
 
                     <div class="portfolio__item col-sm-6 col-md-4">
                         <a class="portfolio__link" href="http://www.agromax.farm">
@@ -132,7 +132,51 @@
                         </a>
                     </div>
 
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="contact__title title"> To contact me just fill in the form  or via  social  media from below</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <form name="Message" id="contactForm" action="http://formspree.io/olegsukharev1991@gmail.com" method="post">
 
+                                <div class="row control-group">
+                                    <div class="form-group col-sm-12 floating-label-form-group controls">
+                                        <label>Name</label>
+                                        <input type="text" name="name" class="form-control" placeholder="Enter your name" id="name" required>
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-sm-12 floating-label-form-group controls">
+                                        <label>Email</label>
+                                        <input type="email" name="email" class="form-control" placeholder="Enter your Email" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-sm-12 floating-label-form-group controls">
+                                        <label>Phone number</label>
+                                        <input type="tel" name="phone" class="form-control" placeholder="Enter your mobile phone number" id="phone" required>
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-sm-12 floating-label-form-group controls">
+                                        <label>Message</label>
+                                        <textarea rows="5" class="form-control" placeholder="Enter a message" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-12 text-center">
+                                        <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
