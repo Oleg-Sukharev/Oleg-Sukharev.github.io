@@ -1,26 +1,54 @@
-@import url("blocks/header.less");
-@import url("blocks/main-nav.less");
-@import url("blocks/services.less");
-@import url("blocks/user-nav.less");
-@import url("blocks/breadcrumbs.less");
-@import url("blocks/sorting.less");
-@import url("blocks/main.less");
-@import url("blocks/filters.less");
-@import url("blocks/catalogue.less");
-@import url("blocks/paggination.less");
-@import url("blocks/footer.less");
-@import url("blocks/socials-nw.less");
-@import url("blocks/popular.less");
-@import url("blocks/info.less");
-@import url("blocks/services-sliders.less");
-@import url("blocks/producers.less");
-@import url("blocks/sliders.less");
-@import url("blocks/feedback.less");
-@import url("blocks/map.less");
+body{
+    position: relative;
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    margin: 0 auto;
+    color: #000;
+    width: 100%;
+}
 
+.container{
+    width: 1160px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 60px;
+}
 
-@gilroy: "Gilroy",'Helvetica', sans-serif;
-@visually-hidden: "Gilroy",'Helvetica', sans-serif;
+a{
+    color: #000;
+    text-decoration: none;
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 000);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.clearfix{
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.show{
+    display: block;
+}
 
 .visually-hidden(){
 	position: absolute;
@@ -69,56 +97,29 @@
          url('../fonts/OpenS/opensans-extrabold-webfont.woff') format('woff');
     font-weight: 800;
     font-style: normal;
-
 }
 
-body{
-    position: relative;
-	font-family: 'Open Sans', 'Helvetica', sans-serif;
-	font-size: 14px;
-	line-height: 18px;
-	font-weight: normal;
-	margin: 0 auto;
-	color: #000;
-}
+@gilroy: "Gilroy",'Helvetica', sans-serif;
+@visually-hidden: "Gilroy",'Helvetica', sans-serif;
 
-.container{
-	width: 1160px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0 60px;
-}
 
-a{
-	color: #000;
-	text-decoration: none;
-}
-.visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 000);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-}
+@import url("blocks/header.less");
+@import url("blocks/main-nav.less");
+@import url("blocks/services.less");
+@import url("blocks/user-nav.less");
+@import url("blocks/breadcrumbs.less");
+@import url("blocks/sorting.less");
+@import url("blocks/main.less");
+@import url("blocks/filters.less");
+@import url("blocks/catalogue.less");
+@import url("blocks/paggination.less");
+@import url("blocks/footer.less");
+@import url("blocks/socials-nw.less");
+@import url("blocks/popular.less");
+@import url("blocks/info.less");
+@import url("blocks/services-sliders.less");
+@import url("blocks/producers.less");
+@import url("blocks/sliders.less");
+@import url("blocks/feedback.less");
+@import url("blocks/map.less");
 
-.clearfix{
-	&::after{
-	    content: "";
-	    clear: both;
-	    display: table;
-	}
-}
-
-.overlay{
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 3;
-}
-
-.show{
-    display: block;
-}
