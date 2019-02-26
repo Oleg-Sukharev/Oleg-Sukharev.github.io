@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -160,7 +160,7 @@
                                 <div class="row control-group">
                                     <div class="form-group col-sm-12 floating-label-form-group controls">
                                         <label>Message</label>
-                                        <textarea rows="5" class="form-control" placeholder="Enter a message" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+                                        <textarea rows="5" class="form-control" name="message" placeholder="Enter a message" id="message" required></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -177,7 +177,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="socials-nw-wr  col-sm-6"> 
+                    <div class="socials-nw-wr  col-sm-6  offset-sm-3"> 
                         <ul class="socials-nw">
                             <li class="socials-nw__item">
                                 <a class="socials-nw__link fa fa-facebook-f" href="https://www.facebook.com/oleg.sukharev.3" target="_blank">
@@ -196,16 +196,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__info col-sm-6 ">
-                        <div class="footer__info-more-wr">
-                            <h3 class="footer__info-tilte footer__info-tilte--dec">Email:</h3>
-                            <a class="footer__info-link"  href="mailto:olegsukharev1991@gmail.com">olegsukharev1991@gmail.com</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </footer>
         <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
         <script src="bootstrap/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>

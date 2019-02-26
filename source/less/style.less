@@ -16,7 +16,7 @@ body{
   	margin: 0;
 }
 
-*, *:before, *:after {
+*, *:before, *:after{
   	box-sizing: border-box;
 }
 
@@ -70,7 +70,6 @@ input{
   margin: -1px;
 }
 
-
 .main{
 	background-color: #50516d;
 	flex-grow: 1;
@@ -84,13 +83,17 @@ input{
     letter-spacing: 2px;
 }
 
-
 .contact__title{
 	text-transform: none;
 	font-size: 20px;
 	letter-spacing: 1px;
 }
 
+.form-group .error:nth-child(3){
+	display: block;
+	text-align: center;
+	color: #ce7c7c;
+}
 
 @import url("blocks/header.less");
 @import url("blocks/info.less");
