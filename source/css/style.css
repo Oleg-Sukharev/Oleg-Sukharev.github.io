@@ -5,8 +5,6 @@ body {
   color: #fff;
   line-height: 1;
   font-size: 14px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   position: relative;
   font-family: 'Roboto', "Arial", sans-serif;
   display: -webkit-box;
@@ -92,9 +90,10 @@ input {
   font-size: 20px;
   letter-spacing: 1px;
 }
-.form-group .error:nth-child(3) {
-  display: block;
+.control-group {
   text-align: center;
+}
+.form-group > .error:nth-child(3) {
   color: #ce7c7c;
 }
 .navbar-brand__code {
