@@ -2,7 +2,7 @@
         var login_link = document.querySelector(".login-link");
         var popup = document.querySelector(".modal-login"); 
         var close = document.querySelector(".modal-close");
-        var overlay = document.querySelector(".overlay");
+        var overlay = document.querySelector(".modal-overlay");
         var map_link = document.querySelector(".button-map");
         var map_link_contacts = document.querySelector(".contacts-button-map");
         var map = document.querySelector(".modal-map");
