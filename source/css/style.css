@@ -96,6 +96,14 @@ input {
 .form-group > .error:nth-child(3) {
   color: #ce7c7c;
 }
+.navbar-toggler {
+  outline: none;
+}
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  outline: none;
+  background-color: #50516d;
+}
 .navbar-brand__code {
   font-style: 25px;
   margin-left: 5px;
