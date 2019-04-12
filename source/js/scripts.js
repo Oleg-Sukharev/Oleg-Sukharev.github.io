@@ -6,16 +6,16 @@
 	});
 
   	$(document).ready(function(){
+
   		//burger menu
 		$.fatNav();
+
 		//animation 
 		AOS.init({
        		easing: 'ease-in-out-sine'
-   		});
+   	});
 
-
-
-	//filter porfolio
+	  //filter porfolio
     $(".portfolio__btn").click(function(){
         var filterValue = $(this).attr('data-filter');
         $(".portfolio__btn").removeClass("portfolio__btn-active");
