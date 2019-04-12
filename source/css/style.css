@@ -12,7 +12,8 @@ body, html {
 }
 
 *, *:before, *:after {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -85,9 +86,15 @@ a:active{
     height: 100vh;
     z-index: 1;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: middle;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: middle;
+        -ms-flex-pack: middle;
+            justify-content: middle;
     overflow: hidden;
 }
 
@@ -105,7 +112,8 @@ a:active{
     padding: 10px 0;
     margin-bottom: 20px;
     background-color: rgba(0, 0, 0, .5);
-    box-shadow: rgba(0, 0, 0, .5) 0 0 0 600px;
+    -webkit-box-shadow: rgba(0, 0, 0, .5) 0 0 0 600px;
+            box-shadow: rgba(0, 0, 0, .5) 0 0 0 600px;
     border: 5px solid #ff704d;
 }
 
@@ -257,7 +265,8 @@ main{
 .form-control:hover{
     background-color:  transparent;
     border-color: #ff704d;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     
 }
 
@@ -268,8 +277,12 @@ main{
 }
 
 .footer .row{
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .about__tel{
@@ -317,7 +330,6 @@ main{
 
 .loader_inner {
     background-image: url(../img/preloader.gif);
-    -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -340,8 +352,12 @@ main{
 
 
 .portfolio__btn-group{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 20px;
 }
 
@@ -378,6 +394,8 @@ main{
 
 .portfolio__item-wr:hover .portfolio__item-content,
 .portfolio__item-wr:focus .portfolio__item-content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -388,6 +406,8 @@ main{
 .portfolio__item-content{
     background-color: rgba(0,0,0,.8);
     text-align: center;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
     position: absolute;
     top: 0;
@@ -395,10 +415,19 @@ main{
     height: 100%;
     width: 100%;
     z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     display: none;
 }
 
