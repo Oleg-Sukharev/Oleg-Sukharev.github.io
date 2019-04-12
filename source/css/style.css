@@ -9,7 +9,6 @@ body, html {
     line-height: 1;
     font-weight: 300;
     letter-spacing: 1px;
-    overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -457,3 +456,9 @@ main{
 .portfolio__item-link:active{
       opacity: 0.8;
 }   
+
+.contacts,
+.about,
+.portfolio{
+    overflow: hidden;
+}
