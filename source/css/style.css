@@ -475,3 +475,10 @@ main{
         font-size: 14px;
     }
 }
+
+.form .error{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0;
+}

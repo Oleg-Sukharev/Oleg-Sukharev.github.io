@@ -189,26 +189,26 @@
 							</div>
 						</div>
 						<div class="col-md-6 contacts__form-wr"  data-aos="fade-right">
-							<form class="contacts__form form" action="https://formspree.io/olegsukharev1991@gmail.com" method="post">
+							<form id="contactForm" class="contacts__form form" action="https://formspree.io/olegsukharev1991@gmail.com" method="post">
 							    <div class="form-group">
 							    	<label class="control-label" for="name">
 							    		<span>*</span>Name
 							    	</label>
-							    	<input class="form-control" id="name" name="name" type="text">
+							    	<input class="form-control" id="name" name="name" type="text" required>
 							    </div>
 							    <div class="form-group">
-							    	<label class="control-label" for="email">
+							    	<label class="control-label" for="email" required>
 							    		<span>*</span>Email
 							    	</label>
-							    	<input class="form-control" id="email" name="email" type="text">
+							    	<input class="form-control" id="email" name="email" type="text" required>
 							    </div>
 							    <div class="form-group ">
-							    	<label class="control-label " for="message">
+							    	<label class="control-label" for="message">
 							     		<span>*</span>Message
 							      	</label>
-							      	<textarea class="form-control" id="message" name="message" rows="2"></textarea>
+							      	<textarea class="form-control" id="message" name="message" rows="2" required></textarea>
 							    </div>
-							    <button name="submit" type="submit">Send</button>
+							    <button type="submit">Send</button>
 							</form>
 						</div>
 					</div>
@@ -229,6 +229,7 @@
 			</div>
 		</footer>
 		<script src="libraries/jquery-3.3.1.min.js"></script>
+		<script src="libraries/jquery.validate.min.js"></script>
 		<script src="libraries/bootstrap-4.min.js"></script>
 		<script src="libraries/fatnav/fatnav.js"></script>
 		<script src="libraries/aos/aos.js"></script>
