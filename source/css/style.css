@@ -464,6 +464,8 @@ main{
 }
 
 
+
+
 @media (max-width: 768px) {
     .footer .row{
         justify-content: space-around;
@@ -481,4 +483,24 @@ main{
     text-align: center;
     margin-top: 5px;
     margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #ff704d;; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f16542; 
 }
