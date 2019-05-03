@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aist</title> 
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.6.3-web/css/all.min.css">
+    <link rel="stylesheet" href="libraries/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="libraries/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-5 header__ls">
+                    <div class="header__category category">
+                        <button class="category__btn button" type="button">Категории</button>
+                        <ul class="category__list">
+                            <li class="category__item"><a class="category__link" href="#">Еда</a></li>
+                            <li class="category__item">
+                                <a class="category__link" href="#">Продукты</a>
+                                <!--ul class="category__submenu">
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Все рестораны</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Пицца</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Суши / Роллы</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Шашлыки</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Бургеры</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Завтраки</a></li>
+                                </ul-->
+                            </li>
+                            <li class="category__item"><a class="category__link" href="#">Цветы</a></li>
+                            <li class="category__item"><a class="category__link" href="#">Вода</a></li>
+                        </ul>
+                    </div>
+                    <button class="header__delivery-btn  button button--red" type="button" data-toggle="modal" data-target="#deliveryCity">Выберете город доставки</button>
+                </div>
+                <div class="col-xl-2">
+                    <a class="header__logo-link logo-link" href="index.html">
+                        <img class="header__logo logo" src="images/logo.svg" alt="Aist" width="180" height="80">
+                    </a>
+                </div>
+                <div class="col-xl-5 header__rs">
+                    <a class="header__tel" href="tel:+7(987)654-32-10">+7(987)654-32-10</a>
+                    <button class="header__link button button--red" type="button" data-toggle="modal" data-target="#logIn">Вход</button>
+                    <button class="header__link button button--green" type="button" data-toggle="modal" data-target="#signIn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1 class="visually-hidden">Доставка еды из любого ресторана</h1>
+        <section class="delivery">
+            <div class="main-slider">
+                <div id="mainSlider" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+                        <li data-target="#mainSlider" data-slide-to="1"></li>
+                        <li data-target="#mainSlider" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="carousel-img w-100" src="images/main-slider/item-1.png" alt="">
+                            <div class="carousel-content-wr">
+                                <div class="carousel-content">
+                                    <h3 class="carousel-title">Доставка еды<br>из любого ресторана</h3>
+                                    <span class="carousel-info">В Вашем городе</span>
+                                    <a class="carousel-link button button--white" href="#">Заказать еду</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="carousel-img w-100" src="images/main-slider/item-1.png" alt="">
+                            <div class="carousel-content-wr">
+                                <div class="carousel-content">
+                                    <h3 class="carousel-title">Доставка еды<br>из любого ресторана</h3>
+                                    <span class="carousel-info">В Вашем городе</span>
+                                    <a class="carousel-link button button--white" href="#">Заказать еду</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="carousel-img w-100" src="images/main-slider/item-1.png" alt="">
+                            <div class="carousel-content-wr">
+                                <div class="carousel-content">
+                                    <h3 class="carousel-title">Доставка еды<br>из любого ресторана</h3>
+                                    <span class="carousel-info">В Вашем городе</span>
+                                    <a class="carousel-link button button--white" href="#">Заказать еду</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev carousel-btn fa fa-angle-left" href="#mainSlider" role="button" data-slide="prev">
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next carousel-btn fa fa-angle-right" href="#mainSlider" role="button" data-slide="next">
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="delivery">
+                <div class="container">
+                    <div class="delivery__search-wr">
+                        <input class="delivery__search" type="text" placeholder="Введите адрес доставки">
+                        <button class="delivery__search-btn btn button--green" type="button">Найти рестораны</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tabs">
+            <div class="container">
+                <div class="row">
+                    <h2 class="tabs__title title">Что будете <span class="tabs__title-dec">заказывать?</span></h2>
+                    <ul class="tabs__list nav nav-pills" role="tablist">
+                        <li class="tabs__item "><a class="tabs__link active" href="#tab1" data-toggle="pill">Еда</a></li>
+                        <li class="tabs__item"><a class="tabs__link" href="#tab2" data-toggle="pill">Продукты</a></li>
+                        <li class="tabs__item"><a class="tabs__link" href="#tab3" data-toggle="pill">Десерты</a></li>
+                        <li class="tabs__item"><a class="tabs__link" href="#tab4" data-toggle="pill">Вода</a></li>
+                        <li class="tabs__item"><a class="tabs__link" href="#tab5" data-toggle="pill">Детям</a></li>
+                        <li class="tabs__item"><a class="tabs__link" href="#tab6" data-toggle="pill">Разное</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab1" class="container tab-pane active">
+                            <div class="tab-content__inner-wr"> 
+                                <a class="tab-content__link" href="#">
+                                    <img class="tab-content__img" src="images/products/products__pizza.jpg" alt="Пицца">
+                                    <h3 class="tab-content__title">Пицца</h3>
+                                </a>
+                                <a class="tab-content__link" href="#">
+                                    <img class="tab-content__img" src="images/products/products__roll.jpg" alt="Роллы / Суши">
+                                    <h3 class="tab-content__title">Роллы / Суши</h3>
+                                </a>
+                                <a class="tab-content__link" href="#">
+                                    <img class="tab-content__img" src="images/products/products__kebab.jpg" alt="Шашлыки">
+                                    <h3 class="tab-content__title">Шашлыки</h3>
+                                </a>
+                                <a class="tab-content__link" href="#">
+                                    <img class="tab-content__img" src="images/products/products__burgers.jpg" alt="Бургеры">
+                                    <h3 class="tab-content__title">Бургеры</h3>
+                                </a>
+                                <a class="tab-content__link" href="#">
+                                    <img class="tab-content__img" src="images/products/products__breakfast.jpg" alt="Завтраки">
+                                    <h3 class="tab-content__title">Завтраки</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="tab2" class="container tab-pane">
+                            <div class="tab-content__inner-wr"> 
+                                <a class="tab-content__link" href="#">
+                                    <img class="tab-content__img" src="images/products/products__pizza.jpg" alt="Пицца">
+                                    <h3 class="tab-content__title">Пицца</h3>
+                                </a>
+                                <a class="tab-content__link" href="#">
+                                    <img class="tab-content__img" src="images/products/products__roll.jpg" alt="Роллы / Суши">
+                                    <h3 class="tab-content__title">Роллы / Суши</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promotions">
+            <div class="container">
+                <div class="promotions__title-wr">
+                    <h2 class="promotions__title title"><span class="promotions__title-dec">Акции</span> и скидки</h2>
+                    <a class="promotions__all" href="#">Все акции</a>
+                </div>
+                <div class="row">
+                    <div id="multiCaruser" class="carousel slide" data-ride="carousel">
+                        <a class="carousel-control-prev carousel-btn fa fa-angle-left" href="#multiCaruser" role="button" data-slide="prev">
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next carousel-btn fa fa-angle-right" href="#multiCaruser" role="button" data-slide="next">
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <a class="col-4" href="#">
+                                    <img src="images/promotions/promotions__1.jpg" alt="Скидка 70">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="col-4" href="#">
+                                    <img src="images/promotions/promotions__2.jpg" alt="Страшно вкусно">
+                                </a>
+                            </div>                    
+                            <div class="carousel-item ">
+                                <a class="col-4" href="#">
+                                    <img src="images/promotions/promotions__3.jpg" alt="Скидка 30">
+                                </a>
+                            </div>                    
+                            <div class="carousel-item ">
+                                <a class="col-4" href="#">
+                                    <img src="images/promotions/promotions__2.jpg" alt="Страшно вкусно">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="container">
+                <div class="row">
+                    <h2 class="advantages__title title">Преимущества</h2>
+                    <p class="advantages__info">Наш сервис предлагает вам огромный перечень преимуществ на ряду с другими ресторанами и компаниями по доставке, а именно:</p>
+                </div>
+                <div class="advantages__container">
+                    <a class="advantages__item" href="#">
+                        <div class="advantages__img-wr">
+                            <svg class="advantages__img" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 45.9166C10.3435 45.9166 0.0833435 35.6564 0.0833435 22.9999C0.0833435 10.3434 10.3435 0.083252 23 0.083252C35.6565 0.083252 45.9167 10.3434 45.9167 22.9999C45.9167 35.6564 35.6565 45.9166 23 45.9166ZM23 41.75C33.3553 41.75 41.75 33.3553 41.75 23C41.75 12.6447 33.3553 4.25 23 4.25C12.6447 4.25 4.25 12.6447 4.25 23C4.25 33.3553 12.6447 41.75 23 41.75ZM25.0833 29.25C25.0833 32.7018 27.8816 35.5 31.3333 35.5C34.7851 35.5 37.5833 32.7018 37.5833 29.25C37.5833 25.7982 34.7851 23 31.3333 23C27.8816 23 25.0833 25.7982 25.0833 29.25ZM31.3333 31.3333C32.4839 31.3333 33.4167 30.4006 33.4167 29.25C33.4167 28.0994 32.4839 27.1667 31.3333 27.1667C30.1827 27.1667 29.25 28.0994 29.25 29.25C29.25 30.4006 30.1827 31.3333 31.3333 31.3333ZM8.41667 16.75C8.41667 20.2018 11.2149 23 14.6667 23C18.1184 23 20.9167 20.2018 20.9167 16.75C20.9167 13.2982 18.1184 10.5 14.6667 10.5C11.2149 10.5 8.41667 13.2982 8.41667 16.75ZM14.6667 18.8333C15.8173 18.8333 16.75 17.9006 16.75 16.75C16.75 15.5994 15.8173 14.6667 14.6667 14.6667C13.5161 14.6667 12.5833 15.5994 12.5833 16.75C12.5833 17.9006 13.5161 18.8333 14.6667 18.8333ZM19.0792 35.5L31.5792 10.5H26.9207L14.4207 35.5H19.0792Z" fill="#389908"/>
+                        </svg>
+                        </div>
+                        <div class="advantages__info-wr">
+                           <h3 class="advantages__info--title">У нас нет наценки</h3>
+                           <p class="advantages__info--text">Наш сервис предлагает вам огромный перечень преимуществ.</p>
+                       </div> 
+                    </a>
+                    <a class="advantages__item" href="#">
+                        <div class="advantages__img-wr">
+                            <svg class="advantages__img" width="46" height="30" viewBox="0 0 46 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6149 0.416748H41.75C44.0512 0.416748 45.9166 2.28223 45.9166 4.58341V25.4167C45.9166 27.7179 44.0512 29.5834 41.75 29.5834H11.6149C10.2218 29.5834 8.92084 28.8872 8.14807 27.728L0.433208 16.1557C-0.0333187 15.4559 -0.0333187 14.5442 0.433208 13.8445L8.14807 2.27216C8.92084 1.113 10.2218 0.416748 11.6149 0.416748ZM4.67051 15L11.615 25.4167H41.75V4.58333H11.615L4.67051 15ZM14.6667 15C14.6667 16.1506 13.7339 17.0833 12.5833 17.0833C11.4327 17.0833 10.5 16.1506 10.5 15C10.5 13.8494 11.4327 12.9167 12.5833 12.9167C13.7339 12.9167 14.6667 13.8494 14.6667 15Z" fill="#389908"/>
+                            </svg>
+                        </div>
+                        <div class="advantages__info-wr">
+                           <h3 class="advantages__info--title">Регулярные акции и скидки</h3>
+                           <p class="advantages__info--text">Наш сервис предлагает вам огромный перечень.</p>
+                       </div> 
+                    </a>
+                    <a class="advantages__item" href="#">
+                        <div class="advantages__img-wr">
+                            <svg class="advantages__img" width="46" height="44" viewBox="0 0 46 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.98515 0.693604L10.9314 3.63988L3.63976 10.9315L0.693481 7.98527L7.98515 0.693604ZM38.0147 0.693685L35.0684 3.63996L42.3601 10.9316L45.3064 7.98535L38.0147 0.693685ZM23 43.8333C11.4941 43.8333 2.16667 34.5059 2.16667 23C2.16667 11.4941 11.4941 2.16667 23 2.16667C34.5059 2.16667 43.8333 11.4941 43.8333 23C43.8333 34.5059 34.5059 43.8333 23 43.8333ZM23 39.6666C32.2048 39.6666 39.6667 32.2047 39.6667 22.9999C39.6667 13.7952 32.2048 6.33325 23 6.33325C13.7953 6.33325 6.33337 13.7952 6.33337 22.9999C6.33337 32.2047 13.7953 39.6666 23 39.6666ZM29.8601 15.277L20.9166 24.2205L16.1397 19.4437L13.1934 22.39L20.9166 30.1131L32.8064 18.2233L29.8601 15.277Z" fill="#389908"/>
+                            </svg>
+                        </div>
+                        <div class="advantages__info-wr">
+                           <h3 class="advantages__info--title">Доставка в течении 30 мин.</h3>
+                           <p class="advantages__info--text">Наш сервис предлагает вам огромный перечень.</p>
+                       </div> 
+                    </a>
+                    <a class="advantages__item" href="#">
+                        <div class="advantages__img-wr">
+                            <svg class="advantages__img" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6667 10.4999H8.65437C12.6764 5.89862 17.0817 4.24992 23 4.24992C33.3553 4.24992 41.75 12.6446 41.75 22.9999C41.75 33.3553 33.3553 41.7499 23 41.7499C12.6447 41.7499 4.25001 33.3553 4.25001 22.9999H0.0833435C0.0833435 35.6564 10.3435 45.9166 23 45.9166C35.6565 45.9166 45.9167 35.6564 45.9167 22.9999C45.9167 10.3434 35.6565 0.083252 23 0.083252C16.3055 0.083252 10.9939 1.98025 6.33334 6.86752V2.14827H2.16668V14.6666H14.6667V10.4999ZM33.4167 20.9167H25.0833V10.5H20.9167V25.0833H33.4167V20.9167Z" fill="#389908"/>
+                            </svg>
+                        </div>
+                        <div class="advantages__info-wr">
+                           <h3 class="advantages__info--title">Мы работаем 24/7</h3>
+                           <p class="advantages__info--text">Наш сервис предлагает вам огромный перечень преимуществ.</p>
+                       </div> 
+                    </a>
+                    <a class="advantages__item" href="#">
+                        <div class="advantages__img-wr">
+                            <svg class="advantages__img" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.45219 10.5834C6.76843 9.46545 6.41669 8.08936 6.41669 6.41675C6.41669 3.11901 8.89659 0.166748 12.6667 0.166748C16.4417 0.166748 19.486 2.69514 21 6.65389C22.514 2.69514 25.5584 0.166748 29.3334 0.166748C33.1035 0.166748 35.5834 3.11901 35.5834 6.41675C35.5834 8.08936 35.2316 9.46545 34.5479 10.5834H37.6667C39.9679 10.5834 41.8334 12.4489 41.8334 14.7501V18.9167C41.8334 21.2179 39.9679 23.0834 37.6667 23.0834V37.6667C37.6667 39.9679 35.8012 41.8334 33.5 41.8334H8.50002C6.19883 41.8334 4.33335 39.9679 4.33335 37.6667V23.0834C2.03217 23.0834 0.166687 21.2179 0.166687 18.9167V14.7501C0.166687 12.4489 2.03217 10.5834 4.33335 10.5834H7.45219ZM18.9167 14.75H4.33333V18.9167H18.9167V14.75ZM37.6667 18.9167H23.0833V14.75H37.6667V18.9167ZM18.9167 37.6667V23.0833H8.5V37.6667H18.9167ZM33.5 37.6667H23.0833V23.0833H33.5V37.6667ZM12.6667 4.33333C11.3743 4.33333 10.5833 5.27492 10.5833 6.41667C10.5833 9.02757 12.7021 10.269 17.728 10.5302C17.1694 6.64917 15.0879 4.33333 12.6667 4.33333ZM24.125 10.5302C24.6836 6.64917 26.7651 4.33333 29.1863 4.33333C30.4787 4.33333 31.2696 5.27492 31.2696 6.41667C31.2696 9.02757 29.1509 10.269 24.125 10.5302Z" fill="#389908"/>
+                            </svg>
+                        </div>
+                        <div class="advantages__info-wr">
+                           <h3 class="advantages__info--title">Накопительная система</h3>
+                           <p class="advantages__info--text">Наш сервис предлагает вам огромный перечень преимуществ.</p>
+                       </div> 
+                    </a>
+                    <a class="advantages__item" href="#">
+                        <div class="advantages__img-wr">
+                            <svg class="advantages__img" width="46" height="32" viewBox="0 0 46 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M32.1291 4.58342L35.9674 12.26L41.75 16.115V23.3334H39.3111C38.4531 20.9059 36.138 19.1667 33.4167 19.1667C30.6954 19.1667 28.3803 20.9058 27.5223 23.3333H18.4777C17.6197 20.9058 15.3046 19.1667 12.5833 19.1667C9.86201 19.1667 7.54691 20.9059 6.68894 23.3334H4.25004V4.58342H32.1291ZM41.75 27.5001H39.311C38.453 29.9275 36.1379 31.6667 33.4167 31.6667C30.6954 31.6667 28.3803 29.9275 27.5223 27.5H18.4777C17.6197 29.9275 15.3046 31.6667 12.5833 31.6667C9.86208 31.6667 7.54702 29.9275 6.689 27.5001H4.25004C1.94885 27.5001 0.083374 25.6346 0.083374 23.3334V4.58342C0.083374 2.28223 1.94885 0.416748 4.25004 0.416748H32.1291C33.7074 0.416748 35.1501 1.30842 35.8559 2.72002L39.1993 9.40687L45.9167 13.8851V23.3334C45.9167 25.6346 44.0512 27.5001 41.75 27.5001ZM14.6667 25.4167C14.6667 26.5673 13.7339 27.5 12.5833 27.5C11.4327 27.5 10.5 26.5673 10.5 25.4167C10.5 24.2661 11.4327 23.3333 12.5833 23.3333C13.7339 23.3333 14.6667 24.2661 14.6667 25.4167ZM35.5 25.4167C35.5 26.5673 34.5673 27.5 33.4167 27.5C32.2661 27.5 31.3333 26.5673 31.3333 25.4167C31.3333 24.2661 32.2661 23.3333 33.4167 23.3333C34.5673 23.3333 35.5 24.2661 35.5 25.4167Z" fill="#389908"/>
+                            </svg>
+                        </div>
+                        <div class="advantages__info-wr">
+                           <h3 class="advantages__info--title">Отслеживание статуса доставки</h3>
+                           <p class="advantages__info--text">Наш сервис предлагает вам огромный перечень.</p>
+                       </div> 
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="restBase">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-7">
+                        <h3 class="restBase__title title">Огромная база<br>кафе и ресторанов <br>твоего города</h3>
+                        <p class="restBase__text">Наш сервис предлагает вам огромный перечень<br>преимуществ на ряду с другими ресторанами...</p>
+                        <div class="restBase__link-wr">
+                            <a class="restBase__link button button--white" href="#">Заказать</a>
+                            <a class="restBase__link button button--white" href="#">Все рестораны</a>
+                        </div>
+                    </div>
+                    <div class="center slider col-md-5 d-none d-md-block" id="slick">
+                        <div>
+                            <div class="slider_item"><img src="images/restaurants/marriott.jpg"></div>
+                        </div>
+                        <div>
+                            <div class="slider_item"><img src="images/restaurants/marriott.jpg"></div>
+                        </div>
+                        <div>
+                            <div class="slider_item"><img src="images/restaurants/marriott.jpg"></div>
+                        </div>
+                        <div>
+                            <div class="slider_item"><img src="images/restaurants/marriott.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 footer__item">
+                    <a class="footer__logo-link logo-link" href="index.html">
+                        <img class="footer__logo logo" src="images/logo.svg" alt="Aist">
+                    </a>
+                    <p class="footer__copyRigth">&#169; Сайт разработан командой zr-code <br>All rights reserved</p>
+                </div>
+                <div class="col-sm-6 col-lg-3 footer__item">
+                    <h3 class="footer__nav-title">Компания</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Информация для партнеров</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Пользовательское соглашение</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">О компании</a>
+                        </li>
+                    </ul>                      
+                </div>
+                <div class="col-sm-6 col-lg-3 footer__item">
+                    <h3 class="footer__nav-title">Полезные ссылки</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">О проекте</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Бонусные баллы</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Блог</a> 
+                        </li>   
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2 footer__item">
+                    <div class="footer_lastCol">
+                        <ul class="footer__socials-list">
+                            <li class="footer__socials-item"><a class="footer__socials-link fab fa-twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
+                            <li class="footer__socials-item"><a class="footer__socials-link fab fa-vk" href="#"><span class="visually-hidden">VK</span></a></li>
+                            <li class="footer__socials-item"><a class="footer__socials-link fab fa-facebook-f" href="#"><span class="visually-hidden">Facebook</span></a></li>
+                        </ul>
+                        <a class="footer__downloadOn-link" href="#">
+                            <img src="images/appStore.png" alt="Apple Store">
+                        </a>
+                        <a class="footer__downloadOn-link" href="#">
+                            <img src="images/googlePlay.png" alt="Apple Store">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modals">
+        <div class="modal fade delivery" id="deliveryCity">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <h2 class="modal-title title">Выберите город</h2>
+                <ul class="delivery__list">
+                    <li class="delivery__item"><a href="#" class="delivery__link">Махачкала</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Каспийск</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Буйнакск</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Кизилюрт</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Дагестанские Огни</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Кизляр</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Дербент</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Хасавюрт</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Избербаш</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Южно-Сухокумск</a></li>
+                </ul>
+                <button type="button" class="close delivery__close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade logIn" id="logIn">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <h2 class="modal-title title modal-dec__title">Войти</h2>
+                <div class="modal__info-wr">или пройти<button class="modal__info-btn button"  data-toggle="modal" data-dismiss="modal" data-target="#signIn">Регистрацию</button></div>
+                <form class="modal__form"  method="post">
+                    <input class="modal__input" type="text" name="email" placeholder="Введите e-mail" required>
+                    <input class="modal__input" type="password" name="password" placeholder="Введите пароль" required>
+                    <a class="modal__restore" href="#">Я забыл пароль!</a>
+                    <p class="modal__submit-wr">
+                        <button class="modal__submit button button--green" type="button">Войти</button>
+                    </p>
+                </form>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal signIn fade logIn" id="signIn">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <h2 class="modal-title title modal-dec__title signIn__title">Регистрация</h2>
+                <div class="modal__info-wr">если есть аккаунт - <button class="modal__info-btn button" data-toggle="modal" data-dismiss="modal" data-target="#logIn">Войти</button><a class="modal__info-link" href="">Есть ресторан или кафе?</a></div> 
+                <form class="modal__form"  method="post">
+                    <input class="modal__input" type="text" name="email" placeholder="Введите e-mail" required>
+                    <input class="modal__input" type="text" name="tel" placeholder="Введите телефон" required>
+                    <input class="modal__input" type="password" name="password" placeholder="Введите пароль" required>
+                    <input class="modal__input" type="password" name="confPassword" placeholder="Повторите пароль" required>
+                    <a class="modal__restore" href="#">Я забыл пароль!</a>
+                    <p class="modal__submit-wr">a
+                        <button class="modal__submit modal__submit--signIn button button--green" type="button">Войти</button>
+                    </p>
+                </form>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="libraries/jQuery/jquery-min.js"></script>
+    <script src="libraries/bootstrap/bootstrap.min.js"></script>
+    <script src="libraries/slick/slick.min.js"></script>
+    <script src="libraries/nice-select/jquery.nice-select.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

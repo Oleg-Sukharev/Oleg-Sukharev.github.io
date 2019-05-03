@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aist</title> 
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.6.3-web/css/all.min.css">
+    <link rel="stylesheet" href="libraries/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-5 header__ls">
+                    <div class="header__category category">
+                        <button class="category__btn button" type="button">Категории</button>
+                        <ul class="category__list">
+                            <li class="category__item"><a class="category__link" href="#">Еда</a></li>
+                            <li class="category__item">
+                                <a class="category__link" href="#">Продукты</a>
+                                <ul class="category__submenu">
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Все рестораны</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Пицца</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Суши / Роллы</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Шашлыки</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Бургеры</a></li>
+                                    <li class="category__submenu-item"><a class="category__submenu-link" href="#">Завтраки</a></li>
+                                </ul>
+                            </li>
+                            <li class="category__item"><a class="category__link" href="#">Цветы</a></li>
+                            <li class="category__item"><a class="category__link" href="#">Вода</a></li>
+                        </ul>
+                    </div>
+                    <button class="header__delivery-btn  button button--red" type="button" data-toggle="modal" data-target="#deliveryCity">Выберете город доставки</button>
+                </div>
+                <div class="col-xl-2">
+                    <a class="header__logo-link logo-link" href="index.html">
+                        <img class="header__logo logo" src="images/logo.svg" alt="Aist" width="180" height="80">
+                    </a>
+                </div>
+                <div class="col-xl-5 header__rs">
+                    <a class="header__tel" href="tel:+7(987)654-32-10">+7(987)654-32-10</a>
+                    <button class="header__link button button--red" type="button" data-toggle="modal" data-target="#logIn">Вход</button>
+                    <button class="header__link button button--green" type="button" data-toggle="modal" data-target="#signIn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>                
+       <h1 class="visually-hidden">Доставка еды из любого ресторана</h1>
+        <section class="catalogueSl">
+            <div id="catalogueSlider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="carousel-img w-100" src="images/main-slider/item-1.png" alt="">
+                        <div class="carousel-content-wr">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4 catalogueSl__ls--wr">
+                                        <div class="catalogueSl__ls">
+                                            <div class="catalogueSl__img-wr">
+                                                <img src="images/restaurants/marriott.png" alt="Marriot">
+                                            </div>
+                                            <div class="catalogueSl__info">
+                                                <p class="catalogueSl__reviews-wr">
+                                                    <span class="catalogueSl__rew-pos rewiev-pos">50%</span>
+                                                    <span class="catalogueSl__rew-neg rewiev-neg">50%</span>
+                                                </p>
+                                                <p class="catalogueSl__rev-all rewiev-all">всего оценок: <span>42</span></p>
+                                                <ul class="catalogueSl__list-fd food-list ">
+                                                    <li class="catalogueSl__item-fd food-item food-item--rolls">Суши</li>
+                                                    <li class="catalogueSl__item-fd food-item food-item--pizza">Пицца</li>
+                                                    <li class="catalogueSl__item-fd food-item food-item--italian">Итальянская</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-lg-8">
+                                        <div class="catalogueSl__rs">
+                                            <div class="carousel-content">
+                                                <h3 class="carousel-title">Доставка еды<br>из любого ресторана</h3>
+                                                <span class="carousel-info">В Вашем городе</span>
+                                                <a class="carousel-link button button--green" href="#">Заказать еду</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  <span class="catalogue__input-indicator"></span><span class="catalogue__input-text">
+        </section>    
+        <div class="catalogue">
+            <div class="container">
+                <div class="row">
+                    <aside class="col-md-4 catalogue__ls--wr">
+                        <div class="catalogue__ls">
+                            <div class="catalogue__search-wr">
+                                <input class="catalogue__search" type="text" placeholder="Поиск блюда">
+                                <button class="catalogue__search-btn btn button--white" type="button">Найти</button>
+                            </div>
+                            <form class="catalogue__form" method="get">
+                                <fieldset class="catalogue__fieldset">
+                                    <legend class="catalogue__legend catalogue__legend--fd">Еда:</legend>
+                                    <ul class="catalogue__input-list">
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox" checked><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">Пицца</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox" checked><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">Роллы/Суши</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox"><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">Бургеры</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox"><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">Завтраки</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox"><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">Блины</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox"><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">Шашлыки</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox"><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">Здоровое питание ПП</span></label></li>                     
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="catalogue__fieldset">
+                                    <legend class="catalogue__legend catalogue__legend--cr">Критерии:</legend>
+                                    <ul class="catalogue__input-list">
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox" checked><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">с бесплатной доставкой</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox" checked><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">без мин. суммы заказа</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox"><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">халяль</span></label></li>
+                                        <li class="catalogue__input-item"><label><input class="catalogue__input-checkbox visually-hidden" type="checkbox"><span class="catalogue__input-indicator"></span><span class="catalogue__input-text">еда за баллы</span></label></li>
+                                    </ul>
+                                </fieldset>
+                                <button class="catalogue__form-btn visually-hidden" type="submit">Показать</button>
+                            </form>
+                            <p class="catalogue__desc">Заказ и доставка еды из кафе и ресторанов</p>
+                        </div>
+                    </aside>
+                    <section class="col-md-8">
+                        <div class="catalogue__nav">
+                            <div class="catalogue__pages">
+                                <span class="catalogue__pages-op">Открытые</span>
+                                <a class="catalogue__pages-all" href="#">Все</a>
+                            </div>
+                            <input class="catalogue__nav-search" type="text" placeholder="Поиск кафе, ресторана или заведения">
+                            <button class="catalogue__nav-btn button btn button--green" type="button">Найти</button>
+                        </div>
+                        <div class="catalogue__list">
+                            <a class="catalogue__item" href="">
+                                <div class="catalogue__img-wr">
+                                    <img class="catalogue__img" src="images/restaurants/marriott.jpg" alt="marriott">
+                                </div>
+                                <div class="catalogue__info">
+                                    <div class="catalogue__top"> 
+                                        <div class="catalogue__top-ls">
+                                            <h3 class="catalogue__ttile">Название рестарана</h3>
+                                            <ul class="catalogue__food-list food-list ">
+                                                <li class="catalogue__item-fd food-item food-item--rollsGr">Суши</li>
+                                                <li class="catalogue__item-fd food-item food-item--pizzaGr">Пицца</li>
+                                                <li class="catalogue__item-fd food-item food-item--italianGr">Итальянская</li>
+                                            </ul>
+                                        </div>
+                                        <div class="catalogue__top-rs">
+                                            <p class="catalogue__reviews-wr">
+                                                <span class="catalogue__rew-pos rewiev-pos">50%</span>
+                                                <span class="catalogue__rew-neg rewiev-neg">50%</span>
+                                                <p class="catalogue__rev-all rewiev-all">всего оценок:<span>42</span></p>
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <ul class="catalogue__ilist">
+                                        <li class="catalogue__ilist-item work-item work-item--time"><span>Режим работы: </span>10:00-22:00</li>
+                                        <li class="catalogue__ilist-item work-item work-item--money"><span>Сумма заказа: </span>от 500,00 &#8381</li>
+                                        <li class="catalogue__ilist-item work-item work-item--delivery-gr"><span>Доставка: </span>Бесплатно</li>
+                                        <li class="catalogue__ilist-item work-item work-item--payment-gr"><span>Оплата: </span>Онлайн, курьеру</li>
+                                        <li class="catalogue__ilist-item work-item work-item--adress"><span>Адрес: </span>г. Москва, ул. Пушкинская 69/17</li>
+                                        <li class="catalogue__ilist-item work-item work-item--visa-md work-item--wm-md"><span class="work-item work-item--bonus">Еда за баллы</span></li>
+                                    </ul>
+                                </div>    
+                            </a>
+                        </div>
+                        <p class="catalogue__recom">Вашего любимого ресторана или магазина нет в списке?</p>
+                        <button class="catalogue__recom-btn button button--green" type="button">Порекомендуйте его нам!</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 footer__item">
+                    <a class="footer__logo-link logo-link" href="index.html">
+                        <img class="footer__logo logo" src="images/logo.svg" alt="Aist"">
+                    </a>
+                    <p class="footer__copyRigth">&#169; Сайт разработан командой zr-code <br>All rights reserved</p>
+                </div>
+                <div class="col-sm-6 col-lg-3 footer__item">
+                    <h3 class="footer__nav-title">Компания</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Информация для партнеров</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Пользовательское соглашение</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">О компании</a>
+                        </li> 
+                    </ul>                      
+                </div>
+                <div class="col-sm-6 col-lg-3 footer__item">
+                    <h3 class="footer__nav-title">Полезные ссылки</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">О проекте</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Бонусные баллы</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Блог</a> 
+                        </li>   
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2 footer__item">
+                    <div class="footer_lastCol">
+                        <ul class="footer__socials-list">
+                            <li class="footer__socials-item"><a class="footer__socials-link fab fa-twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
+                            <li class="footer__socials-item"><a class="footer__socials-link fab fa-vk" href="#"><span class="visually-hidden">VK</span></a></li>
+                            <li class="footer__socials-item"><a class="footer__socials-link fab fa-facebook-f" href="#"><span class="visually-hidden">Facebook</span></a></li>
+                        </ul>
+                        <a class="footer__downloadOn-link" href="#">
+                            <img src="images/appStore.png" alt="Apple Store">
+                        </a>
+                        <a class="footer__downloadOn-link" href="#">
+                            <img src="images/googlePlay.png" alt="Apple Store">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modals">
+        <div class="modal fade delivery" id="deliveryCity">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <h2 class="modal-title title">Выберите город</h2>
+                <ul class="delivery__list">
+                    <li class="delivery__item"><a href="#" class="delivery__link">Махачкала</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Каспийск</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Буйнакск</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Кизилюрт</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Дагестанские Огни</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Кизляр</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Дербент</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Хасавюрт</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Избербаш</a></li>
+                    <li class="delivery__item"><a href="#" class="delivery__link">Южно-Сухокумск</a></li>
+                </ul>
+                <button type="button" class="close delivery__close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="modal fade logIn" id="logIn">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <h2 class="modal-title title modal-dec__title">Войти</h2>
+                <div class="modal__info-wr">или пройти<button class="modal__info-btn button"  data-toggle="modal" data-dismiss="modal" data-target="#signIn">Регистрацию</button></div>
+                <form class="modal__form" method="post">
+                    <input class="modal__input" type="text" name="email" placeholder="Введите e-mail" required autofocus>
+                    <input class="modal__input" type="password" name="password" placeholder="Введите пароль" required>
+                    <a class="modal__restore" href="#">Я забыл пароль!</a>
+                    <p class="modal__submit-wr">
+                        <button class="modal__submit button button--green" type="button">Войти</button>
+                    </p>
+                </form>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="modal signIn fade logIn" id="signIn">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <h2 class="modal-title title modal-dec__title signIn__title">Регистрация</h2>
+                <div class="modal__info-wr">если есть аккаунт - <button class="modal__info-btn button" data-toggle="modal" data-dismiss="modal" data-target="#logIn">Войти</button><a class="modal__info-link" href="">Есть ресторан или кафе?</a></div> 
+                <form class="modal__form" method="post">
+                    <input class="modal__input" type="text" name="email" placeholder="Введите e-mail" required autofocus>
+                    <input class="modal__input" type="text" name="tel" placeholder="Введите телефон" required>
+                    <input class="modal__input" type="password" name="password" placeholder="Введите пароль" required>
+                    <input class="modal__input" type="password" name="confPassword" placeholder="Повторите пароль" required>
+                    <a class="modal__restore" href="#">Я забыл пароль!</a>
+                    <p class="modal__submit-wr">a
+                        <button class="modal__submit modal__submit--signIn button button--green" type="button">Войти</button>
+                    </p>
+                </form>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        </div> 
+    </div>
+    <script src="libraries/jQuery/jquery-min.js"></script>
+    <script src="libraries/bootstrap/bootstrap.min.js"></script>
+    <script src="libraries/nice-select/jquery.nice-select.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

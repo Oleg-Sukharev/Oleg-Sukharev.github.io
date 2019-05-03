@@ -1,0 +1,87 @@
+.promotions{
+  position: relative;
+  background-color: @green;
+  padding: 60px 0;
+  margin-bottom: 60px;
+  background: @gradient;
+  & .carousel-item-next,
+  & .carousel-item-prev,
+  & .carousel-item.active{
+  	display: flex;
+  }
+}
+
+.promotions__title-wr{
+	position: relative;
+}
+
+.promotions__title {
+	color: @white;
+}
+
+.promotions__title-dec{
+	position: relative;
+	margin-bottom: 40px;
+	&::before{
+	    content: "";
+	    position: absolute;
+	    left: 0;
+	    bottom: -10px;
+	    width: 100%;
+	    height: 4px;
+	    background-color: @white;
+	}
+}
+
+.promotions .carousel-control-prev{
+	left: -5%;
+}
+
+.promotions .carousel-control-next{
+	right: -5%;
+}
+
+.promotions__all{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: @white;
+	&:hover,
+	&:focus,
+	&:active{
+		text-decoration: underline;
+		color: @white;
+	}
+}
+
+.promotions .carousel-btn:hover,
+.promotions .carousel-btn:focus,
+.promotions .carousel-btn:active{
+  background-color: @orange;
+}
+
+@media (max-width: 768px){s
+	.promotions{
+	    padding: 20px 0;
+	    margin-bottom: 10px;
+	}
+	
+	.promotions .carousel-control-prev, {
+		left: 0;
+	}
+	
+	.promotions .carousel-control-next{
+		right: 0;
+	}
+}
+@media (max-width: 576px){
+	.promotions__all{
+		position: relative;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.promotions__title{
+		margin-bottom: 15px;
+	}
+
+}

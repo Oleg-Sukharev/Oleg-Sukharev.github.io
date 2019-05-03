@@ -1,0 +1,390 @@
+@import "../fonts/montserrat/fonts.css";
+@import "../libraries/nice-select/nice-select.css";
+
+//colors
+@orange: #CC3300;
+@green: #389908;
+@lightGreen: #74CC47;
+@grey: #2c2c2c;
+@white: #fff;
+
+//bg
+@gradient: repeating-linear-gradient(45deg, #89c456, #89c456 15px, #93c964 15px, #93c964 20px);
+
+body{
+	color: @grey;
+	font-size: 14px;
+	line-height: 21px;
+	font-family: 'montserrat', "Arial" ,sans-serif;
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  	box-sizing: border-box;
+}
+
+a{
+	cursor: pointer;
+	font-family: inherit;
+	text-decoration:none;
+	outline: none;
+	color: inherit;
+	&:hover,
+	&:focus,
+	&:active,
+	&:disabled{
+		text-decoration: none;
+		color: inherit;
+	}	
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	padding: 0;    
+	margin: 0;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+img{
+	width:100%;
+	height: auto;
+}
+
+input,button{
+	box-shadow: none;
+	border: none;
+	outline: none;
+	font-family: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.logo-link{
+	display: block;
+	width: 180px;
+	height: 80px;
+}
+
+.button{
+	display: inline-block;
+	font-size: 14px;
+	font-family: inherit;
+	color: @green;
+	text-align: center;
+	line-height: 18px;
+	padding: 11px 0;
+	font-weight: 500;
+	border-radius: 5px;
+	&:hover,
+	&:focus,
+	&:active{
+		outline: none;
+	}
+}
+
+.button--green{
+	background-color: @green;
+	color: @white;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+	&:hover,
+	&:focus{
+		background-color: @white;
+		color: @green;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+	}
+	&:active{
+		color: @green;
+		background-color: @white;
+		box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+		padding-top: 12px;
+		padding-bottom: 10px;
+	}
+}
+
+
+.button--red{
+	background-color: transparent;
+	border: 1px solid @lightGreen;
+	color: @green;
+	padding: 10px 0;
+	&:hover,
+	&:focus{
+		color: @orange;
+		border-color: @orange;
+	}
+	&:active{
+		color: @orange;
+		border-color: @orange;
+		padding-top: 11px;;
+		padding-bottom: 9px;
+	}
+}
+
+.button--white{
+	color: @white;
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+	&:hover,
+	&:focus{
+		color: @green;
+		background-color: @white;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+	}
+	&:active{
+		color: @green;
+		background-color: @white;
+		box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.title{
+	font-size: 64px;
+	margin-bottom: 30px;
+	font-weight: 600;
+}
+
+@media (max-width: 992px) {
+	.title{
+		font-size: 30px;
+	}
+}
+
+input::-webkit-input-placeholder { 
+  color: @green;
+}
+
+input::-moz-placeholder { 
+  color: @green;
+}
+
+input:-ms-input-placeholder { 
+  color: @green ;
+}
+
+input:-moz-placeholder {
+  color: @green;
+}
+
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder,
+input:-moz-placeholder{ 
+  color: @green;
+}
+
+.padding-right{
+	padding-right: 15px;
+}
+
+.rewiev-pos{
+	display: inline-block;
+	position: relative;
+	line-height: 26px;
+	font-size: 18px;
+	font-weight: 500;
+	color: @green;
+	margin-right: 20px;
+	&::before{
+		content: "";
+	    position: relative;
+	    left: 0;
+	    width: 24px;
+	    height: 22px;
+	    background-image: url(../images/icons.png);
+	    background-color: transparent;
+	    background-position: -212px -10px;
+	    line-height: 26px;
+	    display: inline-block;
+	    margin-right: 10px;
+	    top: 3px;
+	}
+}
+
+.rewiev-neg{
+	display: inline-block;
+	position: relative;
+	line-height: 26px;
+	font-size: 18px;
+	font-weight: 500;
+	color: @orange;
+	&::after{
+		content: "";
+	    position: relative;
+	    left: 0;
+	    width: 24px;
+	    height: 22px;
+	    background-image: url(../images/icons.png);
+	    background-color: transparent;
+	    background-position: -300px -10px;
+	    line-height: 26px;
+	    display: inline-block;
+	    margin-left: 10px;
+	    top: 6px;
+	}
+}
+
+.rewiev-all{
+	font-size: 14px;
+	line-height: 21px;
+	margin-bottom: 18px;
+}
+
+
+.food-item{
+	font-size: 16px;
+	line-height: 20px;
+	display: inline-block;
+	&::before{
+		content: "";
+	    position: relative;
+	    left: 0;
+	    width: 24px;
+	    height: 24px;
+	    background-image: url(../images/icons.png);
+	    background-color: transparent;
+	    line-height: 26px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    margin-right: 3px;
+	    margin-left: 7px;
+	    vertical-align: bottom;
+	}
+}
+
+.food-item--rolls::before{
+	width: 20px;
+	height: 24px;
+	background-position: -88px -10px;
+	top: 8px;
+}
+
+.food-item--rollsGr::before{
+    background-position: -128px -10px;
+    margin-left: 0;
+    height: 14px;
+}
+
+
+.food-item--pizza::before{
+	background-position: -432px -10px;
+}
+
+.food-item--pizzaGr::before{
+	background-position: -385px -10px;
+	margin-left: 0;
+}
+
+.food-item--italian::before{
+	background-position: -344px -10px;
+}
+
+.food-item--italianGr::before{
+	background-position: -474px -10px;
+	margin-left: 0;
+}
+
+
+
+
+.work-item{
+	position: relative;
+	display: inline-block;
+	&::before{
+		content: "";
+	    position: relative;
+	    left: 0;
+	    width: 24px;
+	    height: 24px;
+	    background-image: url("../images/icons_2.png");
+	    background-color: transparent;
+	    line-height: 26px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    margin-right: 10px;
+	}
+}
+
+.work-item--time::before{
+   	background-position:-621px -10px;
+   	margin-left: -2px;
+   	top: -1px;
+}
+
+.work-item--money::before{
+   	background-position: -533px -10px;
+}
+.work-item--delivery-gr::before{
+   	background-position: -101px -10px;
+   	top: 3px;
+}
+
+.work-item--payment-gr::before{
+   	background-position:  -489px -10px;
+}
+.work-item--adress::before{
+	background-position:  -313px -10px;
+	margin-left: -2px;
+}
+
+.work-item--visa::before{
+	background-position: -709px -10px;
+}
+
+.work-item--wm::before{
+	background-position: -357px -10px;
+}
+
+.work-item--bonus:before{
+    background-position: -138px -10px;
+}
+
+
+.work-item--visa-md::after{
+	content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/icons_2.png");
+    background-color: transparent;
+    line-height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+	background-position: -709px -10px;
+    position: absolute;
+    left: auto;
+    right: 40px;
+    content: "";
+}
+
+.work-item--wm-md::before{
+	background-position: -357px -10px;
+    position: absolute;
+    left: auto;
+    right: 0;
+}
+
+
+
+@import url("blocks/header.less");
+@import url("blocks/delivery.less");
+@import url("blocks/tabs.less");
+@import url("blocks/promotions.less");
+@import url("blocks/advantages.less");
+@import url("blocks/restaurants.less");
+@import url("blocks/footer.less");
+@import url("blocks/modals.less");
+@import url("blocks/catalogue.less");
+@import url("blocks/catalogue-slider.less");
+@import url("blocks/restBase.less");
