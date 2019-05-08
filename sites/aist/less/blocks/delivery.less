@@ -1,0 +1,178 @@
+.delivery{
+	margin-bottom: 60px;
+}
+
+.main-slider{
+	margin-bottom: 40px;
+}
+
+.carousel-indicators li{
+	width: 10px;
+	height: 10px;
+	border: 2px solid @white;
+	background-color: transparent;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+.carousel-indicators .active{
+	background-color: @green;
+}
+.carousel-btn{
+	width: 40px;
+	height: 40px;
+	margin: auto 0;
+	font-size: 25px;
+	background-color: @white;
+	border-radius: 50%;
+	opacity: 1;
+	color: @grey;
+}
+
+.carousel-control-prev{
+	left: 5%;
+}
+
+.carousel-control-next{
+	right: 5%;
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus,
+.carousel-btn:active{
+	background-color: @green;
+	color: @white;
+}
+
+.carousel-indicators{
+	bottom: 25px;
+	margin-bottom: 0;
+}
+
+.carousel-content-wr{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    color: @white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.carousel-title{
+	margin-bottom: 20px;
+	font-size: 86px;
+	font-weight: 500;
+}
+
+.carousel-info{
+	display: block;
+	margin-bottom: 30px;
+}
+
+.carousel-link{
+	width: 210px;
+}
+
+.carousel-img{
+	min-height: 200px;
+}
+
+.delivery__search-wr{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.delivery__search{
+	flex: 1;
+	padding: 20px 18px;
+	border: 1px solid @lightGreen;
+	border-radius: 60px;
+	color: @green;
+	line-height: 17px;
+	margin-right: 30px;
+}
+
+.delivery__search-btn{
+	padding: 18px 24px;
+	font-size: 14px;
+	line-height: 18px;
+	flex: 0;
+	min-width: 180px;
+	margin-right: 0;
+	&:active{
+		padding-top: 19px;
+		padding-bottom: 17px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.carousel-title{
+		font-size: 50px;
+	}
+
+	.carousel-title,
+	.carousel-info{
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 992px){
+	.carousel-title{
+		font-size: 36px;
+	}
+
+	.delivery__search{
+		padding: 10px 18px
+	}
+}
+
+@media (max-width: 768px){
+	.delivery{
+		margin-bottom: 15px;
+	}
+
+	.carousel-title{
+		font-size: 20px;
+	}
+	
+	.carousel-indicators{
+		display: none;
+	}
+}
+
+@media (max-width: 568px){
+	.delivery__search{
+		width: 100%;
+		margin-bottom: 10px;
+		margin-right: 0;
+		flex: auto;
+	}
+
+	.delivery__search-btn{
+		padding: 12px 24px;
+		&:active{
+			padding-top: 13px;
+			padding-bottom: 11px;
+		}
+	}
+
+	.carousel-title{
+		font-size: 20px;
+	}
+
+	.carousel-btn{
+		width: 20px;
+		height: 20px;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	.carousel-link{
+		width: 120px;
+	}
+}
