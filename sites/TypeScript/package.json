@@ -1,0 +1,16 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w",
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "typescript": "^2.8.3"
+  }
+}

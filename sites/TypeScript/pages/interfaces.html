@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interfaces</title>
+</head>
+<body>
+    <h1>Interfaces</h1>
+    <p>Интерфейс – специальный тип данных определяющий контракт, которого должен придерживаться определенный объект.</p>
+    <p>Интерфейс можно рассматривать как требования к объектам иметь свойство с указаное в interface с указанным типом данных 
+    <p>В качестве параметра можно передать экземпляр класса, который реализовал интерфейс или объект, который по своей структуре подходит под указанный интерфейс. </p>
+    <pre>
+        <code>
+        
+            interface Teacher {
+                name: string,
+                age: number,
+                interests?: string[] //опциональное свойство
+            }
+            
+            let teacher ={
+                name: "Andry",
+                age: 30,
+                interests: ["sport","reading"]
+            }
+
+            // readonly свойство может быть установленно только в момент создания объекта
+            interface Coordinates {
+                readonly x: number;
+                readonly y: number;
+            }
+            
+            let point: Coordinates = {x: 10, y: 20};
+            //point.x = 100; // ошибка
+
+
+            Интерфейс описывает сигнатуру функции,
+            функция должна принимать одно строковое значение и возвращать boolean
+
+            interface Searchable {
+                (value: string) : boolean;
+            }
+            
+            Implements - ключевое слово для реализации интерфейса в классе
+            если члены интерфейса не будут определены в классе компилятор выдаст ошибку
+
+
+            interface Report {
+                name: string;
+                build: () => string;
+            }
+            
+            class DailyReport implements Report {
+                name: string = "Daily Report";
+            
+                build() : string {
+                    return "some daili report data";
+                }
+            }
+            
+            console.log(new DailyReport().build());
+        </code>
+    </pre>
+     <script src="/dist/interfaces.js"></script>
+</body>
+</html>
