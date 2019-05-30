@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Namespaces</title>
+</head>
+
+<body>
+    <h1>Namespaces</h1>
+    <p>Пространство имен - механизм для группировки кода и определения отдельных областей видимости.</p>
+    <p> /// &lt;reference path ="module.js"/&gt; </p>
+    <ul>
+        <li>Директива для TS компилятора</li>
+        <li>Директива для TS компилятора</li>
+        <li>Указывается в начале файла</li>
+    </ul>
+    <pre>
+        <code>
+            namespace Sample{
+                export class MyClass1{
+                    public message(){
+                        console.log("Hello");
+                    }
+                }
+            }
+            
+            let temp = new Sample.MyClass1;
+            temp.message();
+			
+        </code>
+    </pre>
+    <script src="/dist/namespaces.js"></script>
+</body>
+
+</html>

@@ -122,3 +122,21 @@ class WeaklyReport implements Report {
 
 console.log(new DailyReport().build());
 console.log(new WeaklyReport().build());
+
+
+
+        
+interface Teacher {
+    name: string,
+    age: number,
+    interests?: string[] //опциональное свойство
+}
+
+
+let teacher: Teacher ={
+    name: "Andry",
+    age: 30,
+    interests: ["sport","reading"]
+}
+
+

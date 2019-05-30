@@ -62,4 +62,9 @@ class WeaklyReport {
 }
 console.log(new DailyReport().build());
 console.log(new WeaklyReport().build());
+let teacher = {
+    name: "Andry",
+    age: 30,
+    interests: ["sport", "reading"]
+};
 //# sourceMappingURL=interfaces.js.map

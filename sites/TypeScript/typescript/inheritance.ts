@@ -40,7 +40,7 @@ class Derived extends Base { // класс Derived наследует класс
 let derived1: Derived = new Derived();
 
 // доступен только метод method2, так как он public. Остальные методы не доступны так как данный код находится за пределами класса
-derived1.method2(); TextMetricst
+derived1.method2(); 
 console.log(derived1.value2);
 
 // базовый тип данных
