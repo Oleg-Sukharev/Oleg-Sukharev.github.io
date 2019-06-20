@@ -1,0 +1,134 @@
+.tabs {
+    margin-bottom: 80px;
+    font-size: 18px;
+}
+
+.tabs__list {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid @grizzle;
+    font-weight: 300;
+    color: @grizzle;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.tabs__link {
+    width: 16.666%;
+    flex-grow: 1;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+    display: block;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        right: -1px;
+        height: 50%;
+        top: 25%;
+        width: 1px;
+        background-color: @grizzle;
+    }
+
+    &:last-child::before {
+        display: none;
+    }
+}
+
+.tabs__link--inst {
+    position: relative;
+
+    &::after {
+        content: " ";
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        width: 21px;
+        height: 27px;
+        background-position: -42px -10px;
+        background-image: url('../images/icons-sprite.png');
+        background-color: transparent;
+        background-repeat: no-repeat;
+        top: 0;
+
+    }
+}
+
+.tabs__list .active::before {
+    display: none;
+}
+
+.tabs__list .active {
+    background-color: @grizzle;
+    color: @white;
+}
+
+.tabs__features-item {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        font-size: 20px;
+        content: "..................................................................................................................................................................................................................................................................................................................";
+        position: absolute;
+        height: 20px;
+        width: 2000px;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.tabs__features-subtitle {
+    margin-bottom: 20px;
+}
+
+.tabs__features-value {
+    background-color: @white;
+    padding-left: 5px;
+    z-index: 1;
+    position: relative;
+}
+
+.tabs__features-name {
+    background-color: @white;
+    position: relative;
+    padding-right: 5px;
+    z-index: 1;
+    position: relative;
+}
+
+
+@media @max-large {
+    .tabs {
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .tabs__link {
+        width: 50%;
+        line-height: 35px;
+        font-size: 16px;
+    }
+
+    .tabs__list {
+        margin-bottom: 30px;
+    }
+}
+
+
+// .tab-pane.active {
+//     animation: slide-down 0.5s ease-out;
+// }
+
+// @keyframes slide-down {
+//     0% { opacity: 0; transform: translateX(-70%); }
+//     100% { opacity: 1; transform: translateX(0); }
+// }
+
+
+

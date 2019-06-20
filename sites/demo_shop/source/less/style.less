@@ -1,0 +1,232 @@
+@import "../fonts/rubik/fonts.css";
+@import "../css/normalize.css";
+@import "variables.less";
+
+body {
+    color: @dark;
+    font-size: 14px;
+    line-height: 1;
+    font-family: 'Rubik', "Arial", sans-serif;
+    font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    outline: none;
+    color: @dark;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+// img {
+//     width: 100%;
+//     height: auto;
+// }
+
+input,
+button {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+
+//common classes 
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.logo-link {
+    display: block;
+    width: 82px;
+    height: 82px;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+        opacity: 1;
+    }
+}
+
+.fastBuy {
+    display: inline-block;
+    width: 170px;
+    line-height: 45px;
+    margin: 0 auto;
+    padding-left: 20px;
+    position: relative;
+    background-color: @blue;
+    color: @white;
+    position: relative;
+
+    &::before {
+        content: " ";
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: middle;
+        width: 12px;
+        height: 22px;
+        background-position: -10px -10px;
+        background-image: url('../images/icons-sprite.png');
+    }
+
+    &:focus,
+    &:hover,
+    &:disabled {
+        outline: none;
+        background-color: #1844a5;
+        color: @white;
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:active {
+        color: @white;
+        text-decoration: none;
+        opacity: 0.7;
+        outline: none;
+    }
+}
+
+.toCard {
+    display: inline-block;
+    width: 170px;
+    line-height: 45px;
+    margin: 0 auto;
+    padding-left: 20px;
+    position: relative;
+    background-color: @red;
+    color: @white;
+    position: relative;
+
+    &::before {
+        content: " ";
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+        width: 26px;
+        height: 23px;
+        vertical-align: middle;
+
+        width: 26px;
+        height: 23px;
+        background-position: -129px -10px;
+        background-image: url('../images/icons-sprite.png');
+    }
+
+    &:focus,
+    &:hover,
+    &:disabled {
+        color: @white;
+        text-decoration: none;
+        outline: none;
+        background-color: #e64329;
+    }
+
+    &:active {
+        color: @white;
+        text-decoration: none;
+        opacity: 0.7;
+        outline: none;
+    }
+}
+
+
+@media @min-large {
+    .container {
+        max-width: 1020px;
+    }
+}
+
+@media @min-extraLarge {
+    .container {
+        max-width: 1230px;
+    }
+}
+
+
+
+/*footer tp bottom */
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    top: 0;
+    left: 0;
+}
+
+.show+.overlay {
+    display: block;
+    opacity: 1;
+}
+
+@import url("blocks/header.less");
+@import url("blocks/item.less");
+@import url("blocks/tabs.less");
+@import url("blocks/addition.less");
+@import url("blocks/footer.less");
+
+@import url("blocks/table.less");

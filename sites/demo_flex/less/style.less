@@ -1,0 +1,110 @@
+@import "../fonts/rubik/fonts.css";
+@import "../css/normalize.css";
+@import "variables.less";
+
+body {
+    font-size: 14px;
+    line-height: 1;
+    font-family: 'Rubik', "Arial", sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+input,
+button {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+//common classes
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+
+/*footer tp bottom */
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.main{
+    flex: 1 0 auto;
+}
+
+.main .container,
+.main .row{
+    height: 100%;
+}
+
+
+
+@import url("blocks/header.less");
+@import url("blocks/info.less");
+@import url("blocks/footer.less");

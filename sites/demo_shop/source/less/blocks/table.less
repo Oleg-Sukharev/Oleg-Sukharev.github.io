@@ -1,0 +1,138 @@
+table {
+    table-layout: fixed;
+}
+td {
+    word-wrap: break-word;
+    padding: 10px;
+
+}
+
+.info__title {
+    color: @black;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+    caption-side: initial;
+}
+
+.info {
+    color: @grizzle;
+    background-color: @grey;
+    width: 100%;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.info__table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.info__detail-title {
+    color: @black;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    width: 35%;
+}
+
+.info__features-list tr td:first-child {
+    font-size: 22px;
+    color: @dark;
+    text-transform: uppercase;
+    vertical-align: text-top;
+    width: 40%;
+}
+
+.info__table>tbody>tr {
+    border-top: 1px solid @grizzle;
+    border-bottom: 1px solid @grizzle;
+
+}
+
+
+.info__btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px auto;
+    display: block;
+    outline: none;
+    position: relative;
+    transition: 1s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 40px;
+        height: 3px;
+        background-color: @black;
+        top: 5px;
+    }
+
+    &:hover::before,
+    &:focus::before {
+        width: 100%;
+        transition: 1s;
+    }
+
+    &:hover,
+    &:focus {
+        outline: 0;
+    }
+
+    &:active {
+        transition: 0.3s;
+        opacity: 0.2;
+        outline: 0;
+    }
+}
+
+
+@media@max-large {
+    .info__features-list tr td:first-child {
+        width: auto;
+    }
+
+    .info__table>tbody>tr>td:last-child {
+        display: table-row;
+    }
+
+    .info__detail-title {
+        display: inline-block;
+        text-align: left;
+        width: 33%;
+    }
+}
+
+.blur {
+    filter: blur(2px);
+}
+
+.info__detail {
+    display: none;
+}
+
+.info__btn {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media@max-small {
+    .info__features-list td {
+        display: block;
+    }
+}
