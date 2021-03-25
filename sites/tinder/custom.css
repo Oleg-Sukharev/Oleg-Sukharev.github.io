@@ -1,0 +1,22 @@
+body {
+  /* background if img want added  */
+  /* background: #be4380; */
+}
+
+.tinder--slogon {
+  /* slogon  color */
+  color: #000;
+}
+
+.tinder--buttons .tinder--icon {
+  /* controlls bg */
+  background: #fff;
+}
+
+/* version 2*/
+/* .tinder--buttons {
+  order: -1;
+  margin-top: 40px;
+  padding-top: 0;
+}
+*/
